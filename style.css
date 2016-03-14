@@ -1,0 +1,33 @@
+body { 
+    font-family: 'Arial';
+}
+
+h1, h2, h3 {
+    font-weight: normal;
+}
+
+.remark-code, .remark-inline-code { 
+    font-family: 'Monospace'; 
+} 
+
+.remark-slide-content h1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: cadetblue;
+    color: white;
+    font-size: 36pt;
+    margin: 0;
+    padding: 0.2em;
+}
+
+.remark-slide-content h2 {
+    font-size: 48pt;
+    margin-top: 1.6em;
+}
+
+.remark-slide-content ol {
+    font-size: 40pt;
+    line-height: 1.4em;
+}

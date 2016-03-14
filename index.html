@@ -1,0 +1,282 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Demystifying the 3D Web</title> 
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+ </head>
+ <body>
+    <textarea id="source">
+
+class: center, middle
+
+# Demystifying the 3D Web
+## Pietro Grandi
+
+---
+
+# Hi!
+## Pietro Grandi
+1. Frontend developer at BetssonGroup
+2. Working with WebGL since 2012
+3. Born as 3D Artist
+
+---
+
+# Why the web? 
+## Web is everywhere
+1. Desktop
+2. Mobile 
+3. Wearable
+
+---
+
+# Why the web?
+## Browsers offer good environment for applications
+1. Fast JS interpreter (V8)
+2. Standards (HTML5, CSS3, Javascript)
+3. One stack for several platforms
+
+---
+
+# Why WebGL?
+## WebGL
+1. Native API
+2. Porting of OpenGL ES 2.0
+3. GPU access
+4. Khronos Group (independent consortium)
+
+---
+
+# Why WebGL?
+## Native API
+1. Access through JavaScript
+2. No plugin required
+3. Context from canvas
+
+---
+
+# Why WebGL?
+## OpenGL
+1. Industry standard
+2. Shader based pipeline
+3. Khronos Group (independent consortium)
+
+---
+
+# Why WebGL?
+## Shaders
+1. Define rules for visualization
+2. VS for geometry
+3. FG for projected pixels
+4. Take parameters
+5. Use GLSL 1.0
+
+---
+
+# Why WebGL?
+## Shader pipeline
+1. Link shaders
+2. Load geometry data
+3. Draw data
+
+---
+
+# Why WebGL?
+## Immediate mode API
+1. Scene is redrawn each time
+2. No scene caching
+3. Scene is managed by the application
+
+---
+
+# Why WebGL?
+## Support
+1. Chrome
+2. Firefox
+3. Edge
+4. IE 11
+5. IOS 8.0
+
+---
+
+## Yet another JS framework?!
+
+---
+
+# Why frameworks
+## WebGL API offers primitives
+1. Points and connections
+2. Triangles and connections
+3. Colors
+4. Textures
+
+---
+
+# Why frameworks?
+## World is bigger
+1. Polygons
+2. Solids
+3. Fluids
+4. Materials
+
+---
+
+# Why frameworks?
+## A trivial example
+1. webgl code for cube rotation
+2. threejs code for cube rotation
+
+---
+
+# Which framework?
+# The two bigs
+1. ThreeJS
+2. BabylonJS
+3. OSGJS
+4. SceneJS
+
+---
+
+# Which framework
+## ThreeJS
+1. Developed for Flash
+2. Oldest and most famous
+3. Community driven development
+4. Tutorials and examples
+5. MIT License
+
+---
+
+# Which framework
+## BabylonJS
+1. Developed for Silverlight
+2. Supported by Microsoft
+3. Includes physics support
+4. Apache license 2.0
+
+---
+
+# Which framework
+## OSGJS
+1. Based on OpenSceneGraph
+2. used by Sketchfab
+3. MIT License
+
+---
+
+# Which framework
+## SceneJS
+1. Just rendering engine
+2. Declarative approach
+3. Used by BioDigital Human
+4. Custom OSS License
+
+---
+
+# Not just 3D
+## What about 2D?
+1. Shaders can be used for 2D
+3. GPU powered rendering
+4. Filters
+5. Texture blending
+
+---
+
+# Not just 3D
+## PixiJS
+1. Fast rendering engine
+2. Support animations
+3. WebGL blend and filters
+
+---
+
+# Case study
+## Cool.
+### Is someone REALLY using it?
+
+---
+
+# Case study
+## Google maps
+1. Big data visualization
+2. Draw vectors instead of tiles
+3. Custom framework
+
+---
+
+# Case study
+## Autodesk
+1. A360 Viewer
+2. Revit WebGL Publisher
+3. Using ThreeJS
+4. Formerly using Flash
+
+---
+
+# Case study
+## Unity
+1. WebGL target as of 5.3
+2. Compiles to JS (Emscripten)
+3. Custom framework
+
+---
+
+# Security
+## Have you read Microsoft's security report?
+
+---
+
+# Security
+## Graphics driver and libraries are weak
+1. Real time calls for performances
+2. Less checks
+3. Buffer overflow, illegal memory access, DOS
+
+---
+
+# Security
+## Untrusted code
+1. Web applications are not installed
+2. Giving hardware access can be harmful
+3. No control
+
+---
+
+# Security
+## WebGL is not OpenGL
+1. New allocated memory is zeored
+2. Pixels outside framebuffer are set to (0,0,0,0)
+3. Array buffers have fixed size
+4. Only CORS validated resources can be loaded
+
+---
+
+# Security
+## Denial of service
+1. Malicious activity is detected by newer drivers
+2. OS can reset the GPU
+3. GL_ARB_robustness has been introduced
+4. WebGL implementation could detect GPU reset
+
+---
+
+# Thank you!
+## @PietroGrandi3D
+## pietrograndi.com
+
+---
+
+# We are hiring!
+## Betsson Group
+### http://www.betssongroup.com/Jobs
+
+
+    </textarea>
+    <script src="bower_components/remark/out/remark.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>

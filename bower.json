@@ -1,0 +1,27 @@
+{
+  "name": "Demystifying-the-3d-web",
+  "authors": [
+    "Pietro909 <pietro.grandi.3d@gmail.com>"
+  ],
+  "description": "Presentation for codemotion 2016",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "webgl",
+    "3d",
+    "slideshow"
+  ],
+  "license": "CC",
+  "homepage": "www.pietrograndi.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "remark": "^0.13.0"
+  }
+}
