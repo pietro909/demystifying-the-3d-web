@@ -4,18 +4,25 @@ body {
 
 h1, h2, h3 {
     font-weight: normal;
+    color: #a3a3a3;
 }
 
 .remark-code, .remark-inline-code { 
     font-family: 'Monospace'; 
 } 
 
+.remark-slide-content:not(.center) {
+    background-image: url("images/logo-pg.jpg");
+    background-size: 70px;
+    background-position: 0% 0%;
+}
+
 .remark-slide-content h1 {
     position: absolute;
-    left: 0;
+    left: 70px;
     top: 0;
     width: 100%;
-    background-color: cadetblue;
+    background-color: #f0634c;
     color: white;
     font-size: 36pt;
     margin: 0;
@@ -30,4 +37,41 @@ h1, h2, h3 {
 .remark-slide-content ol {
     font-size: 40pt;
     line-height: 1.4em;
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    color: #f0634c;
+    text-decoration: none;
+    border-bottom: 0.05em solid #f0634c;
+}
+
+li:before {
+/*    content: "> "; */
+}
+
+img {
+    width: 7em;
+    height: 7em;
+    display: flex;
+    padding: 1.2em;
+    margin: auto;
+}
+
+.logos {
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+}
+
+#slide-title h1, .question h1, .question h2 {
+    color: black;
+    background: white;
+    position: relative;
+    left: 0;
+}
+
+#slide-title h1, .question h1 {
+    font-size: 48pt;
 }

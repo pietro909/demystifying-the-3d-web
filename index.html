@@ -9,6 +9,7 @@
     <textarea id="source">
 
 class: center, middle
+name: title
 
 # Demystifying the 3D Web
 ## Pietro Grandi
@@ -17,9 +18,17 @@ class: center, middle
 
 # Hi!
 ## Pietro Grandi
-1. Frontend developer at BetssonGroup
+1. Frontend developer at [BetssonGroup](http://www.betssongroup.com/)
 2. Working with WebGL since 2012
 3. Born as 3D Artist
+
+---
+
+class: center, middle
+
+.question[
+# Why the web?
+]
 
 ---
 
@@ -32,19 +41,27 @@ class: center, middle
 ---
 
 # Why the web?
-## Browsers offer good environment for applications
-1. Fast JS interpreter (V8)
-2. Standards (HTML5, CSS3, Javascript)
-3. One stack for several platforms
+## Browser as environment for applications
+1. Fast JS interpreter
+2. Standards
+3. One stack
+
+---
+
+class: center, middle
+
+.question[
+# Why WebGL?
+]
 
 ---
 
 # Why WebGL?
 ## WebGL
 1. Native API
-2. Porting of OpenGL ES 2.0
+2. Porting of [OpenGL ES 2.0](https://www.khronos.org/opengles/2_X/)
 3. GPU access
-4. Khronos Group (independent consortium)
+4. Maintained by [Khronos Group](https://www.khronos.org/)
 
 ---
 
@@ -60,7 +77,7 @@ class: center, middle
 ## OpenGL
 1. Industry standard
 2. Shader based pipeline
-3. Khronos Group (independent consortium)
+3. [Khronos Group](https://www.khronos.org/)
 
 ---
 
@@ -68,9 +85,14 @@ class: center, middle
 ## Shaders
 1. Define rules for visualization
 2. VS for geometry
-3. FG for projected pixels
-4. Take parameters
-5. Use GLSL 1.0
+3. FG for pixels
+
+---
+# Why WebGL?
+## Shaders
+1. Take parameters
+2. Compiled
+5. Use [GLSL 1.0](https://www.khronos.org/files/opengles_shading_language.pdf)
 
 ---
 
@@ -92,19 +114,26 @@ class: center, middle
 
 # Why WebGL?
 ## Support
-1. Chrome
-2. Firefox
-3. Edge
-4. IE 11
-5. IOS 8.0
+.logos[
+    ![Google Chrome](images/chrome.png)
+    ![Mozilla Firefox](images/firefox.png)
+    ![Microsoft Edge](images/edge.png)
+    ![Microsoft Explorer 11](images/explorer.png)
+    ![Safari](images/safari.png)
+    ![IOS 8.0](images/ios_8.png)
+]
 
 ---
 
-## Yet another JS framework?!
+class: center, middle
+
+.question[
+# Yet another JS framework??? 
+]
 
 ---
 
-# Why frameworks
+# Why frameworks?
 ## WebGL API offers primitives
 1. Points and connections
 2. Triangles and connections
@@ -124,31 +153,38 @@ class: center, middle
 
 # Why frameworks?
 ## A trivial example
-1. webgl code for cube rotation
-2. threejs code for cube rotation
+1. [A red square in 53 lines](http://jsbin.com/toyezih/86/edit?js,output) 
+2. [A red square in 25 lines](http://jsbin.com/bezuki/3/edit?js,output)
+
+---
+
+class: center, middle
+
+.question[
+# So, is there the killer framework?
+]
 
 ---
 
 # Which framework?
-# The two bigs
-1. ThreeJS
-2. BabylonJS
-3. OSGJS
-4. SceneJS
+## The biggest
+1. [ThreeJS](http://threejs.org/)
+2. [BabylonJS](http://www.babylonjs.com/)
+3. [OSGJS](http://osgjs.org/)
+4. [SceneJS](http://scenejs.org/)
 
 ---
 
-# Which framework
+# Which framework?
 ## ThreeJS
 1. Developed for Flash
-2. Oldest and most famous
-3. Community driven development
-4. Tutorials and examples
-5. MIT License
+2. Community driven development
+3. Tutorials and examples
+4. MIT License
 
 ---
 
-# Which framework
+# Which framework?
 ## BabylonJS
 1. Developed for Silverlight
 2. Supported by Microsoft
@@ -157,19 +193,19 @@ class: center, middle
 
 ---
 
-# Which framework
+# Which framework?
 ## OSGJS
 1. Based on OpenSceneGraph
-2. used by Sketchfab
+2. used by [Sketchfab](https://sketchfab.com/)
 3. MIT License
 
 ---
 
-# Which framework
+# Which framework?
 ## SceneJS
 1. Just rendering engine
 2. Declarative approach
-3. Used by BioDigital Human
+3. Used by [BioDigital Human](https://www.biodigital.com/)
 4. Custom OSS License
 
 ---
@@ -184,16 +220,19 @@ class: center, middle
 ---
 
 # Not just 3D
-## PixiJS
+## [PixiJS](http://www.pixijs.com/)
 1. Fast rendering engine
 2. Support animations
 3. WebGL blend and filters
 
 ---
 
-# Case study
-## Cool.
-### Is someone REALLY using it?
+class: center, middle
+
+.question[
+# Cool.
+## Is someone REALLY using it?
+]
 
 ---
 
@@ -207,28 +246,56 @@ class: center, middle
 
 # Case study
 ## Autodesk
-1. A360 Viewer
-2. Revit WebGL Publisher
+1. [A360 Viewer](https://a360.autodesk.com/viewer)
+2. [Revit WebGL Publisher](https://apps.autodesk.com/RVT/en/Detail/HelpDoc?id=appstore.exchange.autodesk.com%3Awebgl-publisherrevitexport%3Aen)
 3. Using ThreeJS
 4. Formerly using Flash
 
 ---
 
 # Case study
+## Autodesk
+1. [API](http://developer-autodesk.github.io/) for developer
+2. Convert models
+3. Display 3D
+
+---
+
+# Case study
 ## Unity
 1. WebGL target as of 5.3
-2. Compiles to JS (Emscripten)
+2. Compiles to JS with [Emscripten](https://github.com/kripken/emscripten)
 3. Custom framework
 
 ---
 
-# Security
-## Have you read Microsoft's security report?
+class: center, middle
+
+.question[
+# Big companies spend money.
+## Have you ever used it in production? 
+]
+
+---
+
+# Me
+## Yes, I did it!
+1. UI to navigate environments
+2. Data visualization
+3. Online 3D viewer
+
+---
+
+class: center, middle
+
+.question[
+# Have you read [Microsoft's security report](https://blogs.technet.microsoft.com/srd/2011/06/16/webgl-considered-harmful/)?
+]
 
 ---
 
 # Security
-## Graphics driver and libraries are weak
+## Graphics is weak
 1. Real time calls for performances
 2. Less checks
 3. Buffer overflow, illegal memory access, DOS
@@ -248,16 +315,21 @@ class: center, middle
 1. New allocated memory is zeored
 2. Pixels outside framebuffer are set to (0,0,0,0)
 3. Array buffers have fixed size
+
+---
+
+# Security
+## Unknown sources
+1. Cross origin assets are forbidden
 4. Only CORS validated resources can be loaded
 
 ---
 
 # Security
 ## Denial of service
-1. Malicious activity is detected by newer drivers
-2. OS can reset the GPU
-3. GL_ARB_robustness has been introduced
-4. WebGL implementation could detect GPU reset
+1. OS can reset the GPU
+2. GL_ARB_robustness has been introduced
+3. WebGL implementation could detect GPU reset
 
 ---
 
