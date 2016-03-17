@@ -1,5 +1,5 @@
 body { 
-    font-family: 'Arial';
+    font-family: 'Montserrat', sans-serif;
 }
 
 h1, h2, h3 {
@@ -11,10 +11,30 @@ h1, h2, h3 {
     font-family: 'Monospace'; 
 } 
 
+.remark-slide-content {
+    padding: 1em 3em;
+}
+
 .remark-slide-content:not(.center) {
     background-image: url("images/logo-pg.jpg");
     background-size: 70px;
     background-position: 0% 0%;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.footnote {
+    background-image: url("images/cc.svg");
+    background-size: 50px;
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
 }
 
 .remark-slide-content h1 {
@@ -70,8 +90,17 @@ img {
     background: white;
     position: relative;
     left: 0;
+    padding: 0;
 }
 
 #slide-title h1, .question h1 {
     font-size: 48pt;
+}
+
+#slide-title h1 {
+    color: #f0634c;
+}
+
+.last h2 {
+    color: black;
 }

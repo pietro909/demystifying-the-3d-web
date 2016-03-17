@@ -8,19 +8,34 @@
  <body>
     <textarea id="source">
 
-class: center, middle
+class: center, middle, cover
 name: title
 
 # Demystifying the 3D Web
 ## Pietro Grandi
 
+???
+- what is the 3d web
+- what is webgl
+- see some frameworks
+- case studies
+- security issues
+
 ---
 
 # Hi!
 ## Pietro Grandi
-1. Frontend developer at [BetssonGroup](http://www.betssongroup.com/)
+1. Frontend dev at [BetssonGroup](http://www.betssongroup.com/)
 2. Working with WebGL since 2012
 3. Born as 3D Artist
+
+---
+
+# Pietro Grandi
+## Community
+1. [Khronos Chapter Milano](http://www.meetup.com/Khronos-Milano-Chapter/)
+2. [OTS WebGL workshop](www.opentechschool.org/milan/)
+3. [NodeSchool WebGL workshop](www.eventbrite.com/e/nodeschool-interactive-3d-con-webgl-e-threejs-tickets-18538741876)
 
 ---
 
@@ -84,8 +99,8 @@ class: center, middle
 # Why WebGL?
 ## Shaders
 1. Define rules for visualization
-2. VS for geometry
-3. FG for pixels
+2. Vertex shader for geometry
+3. Fragment shader for pixels
 
 ---
 # Why WebGL?
@@ -121,6 +136,10 @@ class: center, middle
     ![Microsoft Explorer 11](images/explorer.png)
     ![Safari](images/safari.png)
     ![IOS 8.0](images/ios_8.png)
+]
+
+.footernote[
+All product names, logos, and brands are property of their respective owners.
 ]
 
 ---
@@ -179,7 +198,7 @@ class: center, middle
 ## ThreeJS
 1. Developed for Flash
 2. Community driven development
-3. Tutorials and examples
+3. Game engine 
 4. MIT License
 
 ---
@@ -195,15 +214,16 @@ class: center, middle
 
 # Which framework?
 ## OSGJS
-1. Based on OpenSceneGraph
-2. used by [Sketchfab](https://sketchfab.com/)
-3. MIT License
+1. Based on OpenSceneGraphj
+2. Used by [Sketchfab](https://sketchfab.com/)
+3. Rendering engine
+4. MIT License
 
 ---
 
 # Which framework?
 ## SceneJS
-1. Just rendering engine
+1. Rendering engine
 2. Declarative approach
 3. Used by [BioDigital Human](https://www.biodigital.com/)
 4. Custom OSS License
@@ -240,7 +260,10 @@ class: center, middle
 ## Google maps
 1. Big data visualization
 2. Draw vectors instead of tiles
-3. Custom framework
+3. Boost performances 
+
+???
+- https://googleblog.blogspot.it/2011/10/step-inside-map-with-google-mapsgl.html
 
 ---
 
@@ -266,6 +289,9 @@ class: center, middle
 1. WebGL target as of 5.3
 2. Compiles to JS with [Emscripten](https://github.com/kripken/emscripten)
 3. Custom framework
+
+???
+- http://blogs.unity3d.com/2015/12/07/unity-5-3-webgl-updates/
 
 ---
 
@@ -328,14 +354,19 @@ class: center, middle
 # Security
 ## Denial of service
 1. OS can reset the GPU
-2. GL_ARB_robustness has been introduced
+2. .bold[GL_ARB_robustness] has been introduced
 3. WebGL implementation could detect GPU reset
 
 ---
 
+class: last, middle
+
 # Thank you!
 ## @PietroGrandi3D
-## pietrograndi.com
+### [pietrograndi.com](www.pietrograndi.com)
+
+.footnote[
+]
 
 ---
 
