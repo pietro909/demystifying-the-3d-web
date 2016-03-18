@@ -4,8 +4,12 @@
     <title>Demystifying the 3D Web</title> 
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="style.css">
- </head>
- <body>
+</head>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r75/three.min.js"></script>
+
+ <body onload="onStart()">
     <textarea id="source">
 
 class: center, middle, cover
@@ -382,10 +386,12 @@ class: middle
 
 
     </textarea>
+    <canvas id="animation" class="background3d"></canvas>
     <script src="bower_components/remark/out/remark.min.js">
     </script>
     <script>
       var slideshow = remark.create();
     </script>
+    <script src="start3d.js"></script>
   </body>
 </html>
