@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2016 by pietro909 (http://jsbin.com/toyezih/91/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+<meta name="description" content="Square with WebGL">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+  <canvas id="myCanvas" width=400 height=400></canvas>
+<script id="jsbin-javascript">
+
+// Setup
+var canvas = document.getElementById('myCanvas');
+var gl = canvas.getContext('webgl');
+var vShaderSrc =
+  'attribute vec4 vPosition;'+
+  'void main()'+
+  '{'+
+    'gl_Position = vPosition;'+
+  '}';
+var fShaderSrc = 
+  'precision mediump float;'+
+  'void main()'+
+  '{'+
+    'gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);'+
+  '}';
+
+var vertexShader = gl.createShader(gl.VERTEX_SHADER);
+gl.shaderSource(vertexShader, vShaderSrc);
+gl.compileShader(vertexShader);
+
+var fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
+gl.shaderSource(fragmentShader, fShaderSrc);
+gl.compileShader(fragmentShader);
+
+var program = gl.createProgram();
+gl.attachShader(program, vertexShader);
+gl.attachShader(program, fragmentShader);
+gl.linkProgram(program);
+gl.useProgram(program);
+
+// build square
+var vertices = new Float32Array([ 
+  -0.5, -0.5, -0.5,
+  0.5, -0.5, -0.5,
+  0.5, 0.5, -0.5,
+  -0.5, 0.5, -0.5
+]);
+
+var vBuffer = gl.createBuffer();
+gl.bindBuffer(gl.ARRAY_BUFFER, vBuffer);
+gl.bufferData( gl.ARRAY_BUFFER, vertices, gl.STATIC_DRAW );
+
+var vPosition = gl.getAttribLocation(program, 'vPosition');
+gl.vertexAttribPointer(vPosition, 3, gl.FLOAT, false, 0, 0);
+gl.enableVertexAttribArray(vPosition);
+
+// draw
+gl.enable(gl.DEPTH_TEST);
+gl.viewport(0,0,canvas.width, canvas.height);
+gl.clearColor(1.0, 1.0, 1.0, 1.0);
+gl.clear(gl.COLOR_BUFFER_BIT);
+gl.drawArrays(gl.TRIANGLE_FAN, 0, 4);
+
+</script>
+</body>
+</html>
