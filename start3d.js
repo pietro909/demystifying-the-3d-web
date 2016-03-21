@@ -7,6 +7,7 @@ function onStart() {
     cubes = [],
     theColor = 0xf0634c,
     transition = 0.002,
+    
     body = $('body'), h = body.height(), w = body.width(),
     theContainer = $("#animation"),
     theRenderer = new THREE.WebGLRenderer({alpha: true}),
@@ -51,11 +52,11 @@ function onStart() {
 
   buildScene(Math.round(w / 16), w / 600);
 
-  theLight = new THREE.DirectionalLight(0xD2D2D2, 1);
+  theLight = new THREE.DirectionalLight(0xFFFFFF, 1);
   theLight.position.set(20, 20, 20);
   theScene.add(theLight);
 
-  theLight2 = new THREE.DirectionalLight(0x193549 /*3B5CA9*/, 1.2);
+  theLight2 = new THREE.DirectionalLight(0x5342E3/*3B5CA9*/, 1.2);
   theLight2.position.set(-20, -20, 20);
   theScene.add(theLight2);
 
