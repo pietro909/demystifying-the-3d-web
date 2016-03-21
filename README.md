@@ -6,6 +6,7 @@ As every talk is slightly different from each other, due to time constraints and
 Feel free to use it for your own talks, please provide also a reference to my work.
 
 Thank you and happy 3D!
+
 Pietro
 
 [pietrograndi.com](http://www.pietrograndi.com)
