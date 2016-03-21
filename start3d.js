@@ -5,7 +5,7 @@ function onStart() {
   var
     onResizeEnd, theGeometry, theMaterial, theLight, theLight2, elem,
     cubes = [],
-    theColor = 0x5342E3,
+    theColor = 0xf0634c,
     transition = 0.002,
     body = $('body'), h = body.height(), w = body.width(),
     theContainer = $("#animation"),
