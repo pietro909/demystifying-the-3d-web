@@ -4,8 +4,13 @@
     <title>Demystifying the 3D Web</title> 
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="style.css">
- </head>
- <body>
+</head>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r75/three.min.js"></script>
+
+<body onload="onStart()">
+    <div class="animation-container"></div>
     <textarea id="source">
 
 class: center, middle, cover
@@ -13,6 +18,7 @@ name: title
 
 # Demystifying the 3D Web
 ## Pietro Grandi
+### @PietroGrandi3D
 
 ???
 - what is the 3d web
@@ -59,7 +65,7 @@ class: center, middle
 ## Browser as environment for applications
 1. Fast JS interpreter
 2. Standards
-3. One stack
+3. One stack, more platforms
 
 ---
 
@@ -97,10 +103,26 @@ class: center, middle
 ---
 
 # Why WebGL?
+## The Khronos Group
+1. Founded in January 2000
+2. [Including ATI, Intel, NVIDIA...](https://www.khronos.org/members/member_list)
+3. Creating open standard APIs for rich media
+
+???
+OpenGl, OpenCL, Collada, OpenKCam,...
+
+---
+
+# Why WebGL?
 ## Shaders
 1. Define rules for visualization
 2. Vertex shader for geometry
 3. Fragment shader for pixels
+
+???
+roughly:
+VS used to calculate position
+FS used to calculate color
 
 ---
 # Why WebGL?
@@ -142,6 +164,10 @@ class: center, middle
 All product names, logos, and brands are property of their respective owners.
 ]
 
+???
+Chrome the first, then Firefox.
+Microsoft in 2013 and Apple (mobile) in 2014
+
 ---
 
 class: center, middle
@@ -172,8 +198,8 @@ class: center, middle
 
 # Why frameworks?
 ## A trivial example
-1. [A red square in 52 lines](http://jsbin.com/toyezih/86/edit?js,output) 
-2. [A red square in 19 lines](http://jsbin.com/bezuki/3/edit?js,output)
+1. [A red square in 52 lines](http://codepen.io/pietro909/pen/mPwmgx) 
+2. [A red square in 21 lines](http://codepen.io/pietro909/pen/VaWbOM)
 
 ---
 
@@ -201,6 +227,9 @@ class: center, middle
 3. Game engine 
 4. MIT License
 
+???
+example http://codepen.io/pietro909/pen/rewwNe
+
 ---
 
 # Which framework?
@@ -209,6 +238,9 @@ class: center, middle
 2. Supported by Microsoft
 3. Game engine 
 4. Apache license 2.0
+
+???
+example http://codepen.io/pietro909/pen/PNjjoy?editors=0010
 
 ---
 
@@ -232,10 +264,13 @@ class: center, middle
 
 # Not just 3D
 ## What about 2D?
-1. Shaders can be used for 2D
+1. Shaders for 2D effects
 3. GPU powered rendering
 4. Filters
 5. Texture blending
+
+???
+https://www.airtightinteractive.com/demos/js/badtvshader/
 
 ---
 
@@ -243,7 +278,7 @@ class: center, middle
 ## [PixiJS](http://www.pixijs.com/)
 1. Fast rendering engine
 2. Support animations
-3. WebGL blend and filters
+3. [WebGL blend and filters](http://www.goodboydigital.com/new-year-new-pixi/)
 
 ---
 
@@ -310,6 +345,9 @@ class: center, middle
 2. Data visualization
 3. Online 3D viewer
 
+???
+https://sketchfab.com/models/add520232c1c49c6b937be1522bacc1b
+
 ---
 
 class: center, middle
@@ -374,6 +412,19 @@ class: last, middle
 
 ---
 
+# References
+.references[
+- [WebGL programming guide, Kouichi Matsuda](http://www.goodreads.com/book/show/16269927-webgl-programming-guide)
+- [WebGL security, Khronos Group](https://www.khronos.org/webgl/security/)
+- [WebGL considered harmful, Microsoft 2011](https://blogs.technet.microsoft.com/srd/2011/06/16/webgl-considered-harmful/)
+- [Unity WebGL updates, Jonas Echterhoff 2015](http://blogs.unity3d.com/2015/12/07/unity-5-3-webgl-updates/)
+- [Step inside the map with Google MapsGL, Brian McLendon 2011](https://googleblog.blogspot.ae/2011/10/step-inside-map-with-google-mapsgl.html)
+- [WWDC 2014, Apple](https://developer.apple.com/videos/wwdc2014/)
+- [Announcing an updated version of Internet Explorer 11, Microsoft 2014](https://blogs.msdn.microsoft.com/ie/2014/04/02/announcing-an-updated-version-of-internet-explorer-11-available-on-windows-8-1-windows-7-and-windows-phone-8-1/)
+]
+
+---
+
 class: middle
 
 # We are hiring!
@@ -382,10 +433,12 @@ class: middle
 
 
     </textarea>
+    <canvas id="animation" class="background3d"></canvas>
     <script src="bower_components/remark/out/remark.min.js">
     </script>
     <script>
       var slideshow = remark.create();
     </script>
+    <script src="start3d.js"></script>
   </body>
 </html>
