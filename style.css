@@ -115,3 +115,14 @@ canvas {
     width: 100%;
     height: 100%;
 }
+
+.references {
+    margin-top: 5em;
+    font-size: 1.4em;
+}
+
+.references a {
+    color: #a3a3a3;
+    line-height: 1.6em;
+    border-bottom: 0.05em solid #a3a3a3;
+}
